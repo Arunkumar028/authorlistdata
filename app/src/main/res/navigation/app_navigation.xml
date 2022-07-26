@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/authorDetails">
+
+    <fragment
+        android:id="@+id/authorDetails"
+        android:name="com.example.authorlistdata.ui.fragment.FragmentAuthor"
+        tools:layout="@layout/fragment_author" >
+        <action
+            android:id="@+id/action_author_details"
+            app:destination="@id/authorDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authorDetailsFragment"
+        android:name="com.example.authorlistdata.ui.fragment.FragmentAuthorDetails"
+        tools:layout="@layout/fragment_author_details" >
+        <action
+            android:id="@+id/action_author_list"
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/authorDetails"
+            app:destination="@id/authorDetails" />
+    </fragment>
+    </navigation>
