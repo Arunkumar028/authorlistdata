@@ -70,7 +70,6 @@ class MainViewModel @Inject constructor(
     }
 
     fun updatedata(authorentity: Authorentity) = viewModelScope.launch(Dispatchers.IO) {
-        Log.d("0000000000000","1")
         postRepository.update(authorentity)
 
     }

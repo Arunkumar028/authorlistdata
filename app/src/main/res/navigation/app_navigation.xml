@@ -19,8 +19,6 @@
         tools:layout="@layout/fragment_author_details" >
         <action
             android:id="@+id/action_author_list"
-            app:popUpToInclusive="true"
-            app:popUpTo="@+id/authorDetails"
             app:destination="@id/authorDetails" />
     </fragment>
     </navigation>

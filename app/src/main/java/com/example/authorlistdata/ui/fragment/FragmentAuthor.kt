@@ -46,11 +46,9 @@ class FragmentAuthor : Fragment(),
     }
 
     private fun SetUpObserver() {
-        Log.d("0000000000000","4")
         mainviewmodel.getMessage().observe(viewLifecycleOwner) {
             when (it.status) {
                 Status.SUCCESS -> {
-                    Log.d("0000000000000","5")
                     binding.recyclerView.visibility = View.VISIBLE
                     renderList(it.data as ArrayList)
                     filter = it.data as ArrayList<Authorentity>

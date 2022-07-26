@@ -16,7 +16,6 @@ import kotlin.reflect.KParameter
 
 @Database(entities = [Authorentity::class], version = 3, exportSchema = false)
 abstract class AuthorDatabase : RoomDatabase() {
-
     abstract fun appDao(): AuthorDao
 
 }
